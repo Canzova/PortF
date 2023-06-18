@@ -1,0 +1,1011 @@
+/* To import utility css file */
+@import url(utilities.css);
+
+/* Creating some global variables for colours */
+:root {
+    --primary: #3DCFD3;
+    --dark: #161616;
+    --pure: #ffffff;
+    /* Below colour will be used in text of about us */
+    --ternary: #898989;
+    /* Below clour is for our work */
+    --light: #f2f2f2;
+    --secondary: #070606;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 1200px;
+    width: 100vw;
+    overflow-x: hidden;
+    /* This prevents horizontal scrolling */
+}
+
+/* For scrolling effect  */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* To Smoot our text we have used below code */
+
+    /* -webkit-font-smoothing: antialiased; property is a way to enhance the appearance of text on a webpage, particularly on Apple devices using the Safari browser. */
+
+    --webkit-font-smothing: antialiased;
+}
+
+
+/* --------------------------Header------------------- */
+header {
+    background: var(--dark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
+}
+
+.container {
+    max-width: 1152px;
+    padding: 0 15px;
+    margin: 0 auto;
+    /* The ease timing function is one of several available options, and is often used as a default because it provides a smooth transition effect that starts slowly, accelerates, and then slows down again before completing the transition. */
+    transform: all .3s ease;
+}
+
+header nav .left a {
+    color: var(--pure);
+    text-decoration: none;
+    margin-right: 2rem;
+    /* To make texts uppercase */
+    text-transform: uppercase;
+}
+
+header nav .left a:hover {
+    color: var(--primary);
+}
+
+header nav {
+    padding: 2rem 0;
+}
+
+header nav .branding {
+    margin-right: 2rem;
+}
+
+.hero {
+    padding: 3rem 0;
+}
+
+.hero .left img {
+    width: 550px;
+    transform: scale(1.25);
+}
+
+.hero .right {
+    color: var(--pure);
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+}
+
+.hero .right h6 {
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: o.5rem;
+}
+
+.hero .right h1 {
+    font-size: 4rem;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.hero .right h1 span {
+    color: var(--primary);
+}
+
+.hero .right p {
+    line-height: 1.9;
+    margin-bottom: 2rem;
+}
+
+.right button a {
+    text-decoration: none;
+    color: var(--pure);
+}
+
+/* ----------------------------About Me------------------ */
+section {
+    padding: 6rem 0;
+
+}
+
+section.about .about-me-img {
+    height: 450px;
+}
+
+section.about h1 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+section.about h1 span {
+    color: var(--primary);
+}
+
+section.about h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+section.about p {
+    font-family: 'Lato', sans-serif;
+    color: var(--ternary);
+    line-height: 1.9rem;
+    margin-bottom: 2rem;
+}
+
+section.about .socials {
+    display: flex;
+}
+
+section.about .socials a {
+    /* background: var(--dark); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    margin-right: 0.6rem;
+    transition: all .3s ease;
+}
+
+section.about .socials a img {
+    width: 125%;
+    height: 125%;
+    padding: .5rem;
+}
+
+section.about .socials a:hover {
+    background: var(--primary);
+}
+
+/* -------------------------Our Services---------------------- */
+
+/* We are going to design Our services section with the help of CSS Grid  */
+
+.section-heading {
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+}
+
+/* After writing the name of the class we can simply use + operator and can write the nname of just below element of that class to select it.  */
+
+.section-heading+p {
+    color: var(--ternary);
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 8rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.section-heading span {
+    color: var(--primary);
+}
+
+section.services .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 6rem;
+}
+
+section.services {
+    background: var(--light);
+}
+
+section.services .card-wrapper .card {
+    background: var(--pure);
+    padding: 3rem 2rem;
+    position: relative;
+    padding-top: 5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+section.services .card-wrapper .card a {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: var(--dark);
+}
+
+section.services .card-wrapper .card img {
+    position: absolute;
+    /* Image should me above the conatiner. Therefore give negative value to top  */
+    top: -3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section.services .card-wrapper .card h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+section.services .card-wrapper .card p {
+    font-family: 'Lato', sans-serif;
+    color: var(--ternary);
+    line-height: 1.6;
+}
+
+section.services .card-wrapper .card:hover {
+    background: var(--dark);
+}
+
+section.services .card-wrapper .card:hover h2 {
+    color: var(--primary);
+}
+
+section.services .card-wrapper .card:hover p {
+    color: var(--pure);
+}
+
+/* -------------------------For Paint Brsuh Imag------------------------ */
+
+/* Use background image as brush.png and them download the icons from font awesome and style those downloaded imgs as styled below  */
+.img-style {
+    height: 6rem;
+    width: 5rem;
+
+}
+
+/* ------------------------Freelancer--------------------------- */
+
+section.freelancer {
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../Images/camera.png');
+    color: var(--pure);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 80%, 0 100%);
+    padding-bottom: 14rem;
+}
+
+section.freelancer h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+section.freelancer p {
+    margin-bottom: 2rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.freelancer button a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.freelancer button a:hover {
+    color: var(--light);
+}
+
+/* -----------------------Our Clients--------------------------------- */
+
+section.reviews .slider .slide img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    /* If the image's height and width is not same and we trying to give it a size of square, to automatically our image willbe streached, so to remove that streach we use the below line  */
+
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+
+
+section.reviews .slider .slide {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 18rem;
+}
+
+section.reviews .slider .slide p {
+    font-family: 'Lato', sans-serif;
+    color: var(--ternary);
+    margin-bottom: 1rem;
+}
+
+section.reviews .slider .slide span {
+    font-size: 0.8rem;
+}
+
+section.reviews .slider-dots .dots {
+    list-style-type: none;
+
+    /* Changing the properties of slick slider is not easy, we have to force it to work. Therefore we have written !important */
+
+    display: flex !important;
+    justify-content: center;
+}
+
+section.reviews .slider-dots {
+    margin-top: 3rem;
+}
+
+/* Button was inside the slider-dots class we have seen it in the inspect option */
+section.reviews .slider-dots button {
+    font-size: 0;
+    width: 8px;
+    height: 5px;
+    margin-right: 0.3rem;
+    border: none;
+    outline: none;
+    background: var(--ternary);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Slick-active class will be given to the list item which will be selected---> so which ever dot will be selection in delow of the paragraph it will get the below style */
+
+section.reviews .dots li.slick-active button {
+    background: var(--primary);
+    width: 20px;
+}
+
+section.reviews .section-heading+p {
+    margin-bottom: 4rem;
+}
+
+/* -------------------------My work---------------------  */
+section.work {
+    background: var(--light);
+}
+
+/* Here we will use grid  */
+section.work .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+section.work .card-wrapper .card {
+    position: relative;
+    height: 250px;
+}
+
+section.work .card-wrapper .card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(61, 207, 211, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--light);
+    /* To hide the css we have critten above */
+    opacity: 0;
+    transition: all .3s ease;
+    overflow-y: hidden;
+}
+
+section.work .card-wrapper .card:hover .overlay {
+    height: 100%;
+    opacity: 1;
+}
+
+section.work .card-wrapper .card .overlay a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+section.work .card-wrapper .card img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* -----------------Our Blog--------------------- */
+section.blog {
+    background: var(--dark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 90%, 0 100%);
+    padding-bottom: 15rem;
+}
+
+section.blog .section-heading {
+    color: var(--pure);
+}
+
+/* Here we will again use grid  */
+
+section.blog .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+}
+
+
+section.blog .card-wrapper .card {
+    background: var(--pure);
+    height: 100%;
+}
+
+section.blog .card-wrapper .card .img-wrapper {
+    width: 100%;
+    height: 50%;
+}
+
+section.blog .card-wrapper .card .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-right: 0;
+}
+
+section.blog .card-wrapper .card .card-content {
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+section.blog .card-wrapper .card .card-content h1 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+section.blog .card-wrapper .card .card-content a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+section.blog .card-wrapper .card .card-content a:hover {
+    color: var(--primary);
+}
+
+section.blog .card-wrapper .card .card-content span {
+    color: var(--ternary);
+    font-size: 0.8rem;
+}
+
+section.blog .card-wrapper .card .card-content p {
+    font-family: 'Lato', sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* section.blog .card-wrapper .card .card-content a.read-more{
+    font-size: 0.8rem;
+}   */
+
+/* -----------------------------Contact-Us--------------------------------  */
+section.contact .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+}
+
+section.contact .card-wrapper .card {
+    text-align: center;
+}
+
+section.contact .card-wrapper .card img {
+    margin-bottom: 3rem;
+}
+
+section.contact .card-wrapper .card h1 {
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+section.contact .card-wrapper .card h6 {
+    font-size: 1rem;
+    color: var(--ternary);
+    font-weight: 400;
+    margin-bottom: 4rem;
+}
+
+/* Form of contact us */
+section.contact .input-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+section.contact .input-wrap-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+section.contact .input-wrap-2 input {
+    margin-bottom: 2rem;
+}
+
+section.contact .input-wrap-2 textarea {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--light);
+    font-size: 0.9rem;
+}
+
+section.contact input {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--light);
+    font-size: 0.9rem;
+}
+
+section.contact .input-wrap-2 textarea:focus,
+section.contact input:focus {
+    outline: none;
+}
+
+section.contact .btn-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+section.contact .input-wrap-2 .text::placeholder {
+    font-family: 'Lato', sans-serif;
+}
+
+section.contact .input-wrap-2 textarea::after {
+    font-family: 'Lato', sans-serif;
+}
+
+/* -----------------------Footer----------------------------- */
+footer {
+    background: var(--dark);
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+footer .footer-logo {
+    width: 150px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+footer .footer-socials a img {
+    width: 1.5%;
+    height: 1.5%;
+    margin-right: 1rem;
+    filter: invert(1);
+    border-radius: 300px;
+    transition: .5s;
+}
+
+footer .copyright {
+    color: var(--ternary);
+}
+
+footer .footer-socials {
+    margin-bottom: 2rem;
+    margin-right: -1rem;
+}
+
+footer .footer-socials a img:hover {
+    transform: scale(1.5);
+}
+
+/* ------------------------------Mobile Nav------------------------------- */
+.site-main-wrapper {
+    position: relative;
+}
+
+.hamberger {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+
+    /* Our Hamberger Icon was behind the header background. There fore we have written z-index */
+
+    z-index: 11;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.hamberger img {
+    width: 30px;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background: var(--dark);
+    width: 100%;
+    height: 60%;
+    padding: 2rem;
+    padding-top: 5rem;
+
+    /* With the below code our mobile nav will move 100 to the left and it will go out of the screen. Whrn user will click on the hamberger icon then only it should appear */
+
+    transform: translateX(-100%);
+
+}
+
+/* For adding .transition  */
+.transition {
+    transition: all 0.5s ease-in-out;
+}
+
+/* To get it (Mobile Nav) back on the original position */
+.open {
+    transform: translateX(0);
+}
+
+.times {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.times img {
+    filter: invert(100%);
+    width: 30px;
+}
+
+.mobile-nav ul {
+    list-style-type: none;
+}
+
+.mobile-nav ul li a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.mobile-nav-logo {
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 2rem;
+    /* padding: 2rem; */
+    padding-bottom: 2rem;
+}
+
+.mobile-nav ul li {
+    padding-bottom: 1rem;
+}
+/* -------------------------------Pre-Loader------------------------------- */
+#pre-loader{
+    background: white url(../Images/Loading.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+/* --------------------------Media query for navigation menu--------------------- */
+
+@media (max-width:1024px) {
+
+    /* To hide the nav bar if width is less than 1024px  */
+    header #main-nav {
+        display: none;
+    }
+
+    .hamberger {
+        display: block;
+    }
+
+    /* For other purpose then nav-bar */
+    .manage {
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    section.about .socials {
+        justify-content: center;
+    }
+
+    .hero .left img {
+        width: 350px;
+        margin-top: 4rem;
+        transform: scale(1.75);
+    }
+
+    .hero .right {
+        margin-top: -5rem;
+        margin-bottom: 0rem;
+    }
+
+    .hero .right h1 {
+        font-size: 3rem;
+    }
+
+    .hero {
+        padding-top: 9rem;
+        overflow-y: hidden;
+    }
+
+    header {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 90%, 0 100%);
+    }
+
+    section.about .about-me-img {
+        height: 360px;
+        overflow-y: hidden;
+    }
+
+    section.services .card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section.reviews .slider .slide {
+        padding: 0px 11rem;
+    }
+
+    section.work .card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section.blog .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    section.blog {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 95%, 0 100%);
+    }
+
+    /* Footer was not hetting proper space to be visible. There for we have give it a different padding values  */
+    footer {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+
+    footer .footer-socials a img {
+        width: 1.5rem;
+    }
+
+    footer .footer-socials a img:hover {
+        transform: scale(2rem);
+    }
+
+    section.about .flex {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    /* section.blog .card-wrapper .card:nth-child(2){
+        height: 90%;
+    }
+    section.blog .card-wrapper .card .card-content {
+        font-size: 2rem;
+    }
+    section.blog .card-wrapper .card .card-content h1 {
+        font-size: 2rem;
+    }  */
+    /* section.blog .card-wrapper .card:nth-child(3){
+        margin-top: -4.5rem;
+    } */
+
+    section.blog .card-wrapper .card {
+        background: var(--pure);
+        height: 100%;
+    }
+
+    section.blog .card-wrapper .card .card-content p {
+        font-size: 2rem;
+    }
+
+    section.blog .card-wrapper .card .card-content h1 {
+        font-size: 2rem;
+    }
+
+    section.blog .card-wrapper .card .card-content a {
+        font-size: 2rem;
+    }
+
+    section.blog .card-wrapper .card .card-content span {
+        font-size: 2rem;
+    }
+    #pre-loader{
+        background-size: 30%;
+    }
+}
+
+/* -----------------------Lets Making it Responsive--------------------------- */
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 540px;
+        overflow-x: hidden;
+        /* This prevents horizontal scrolling */
+    }
+
+}
+
+/* For Tablet screen*/
+@media (max-width: 768px) {
+    .container {
+        max-width: 720px;
+        overflow-x: hidden;
+        /* This prevents horizontal scrolling */
+    }
+
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+        overflow-x: hidden;
+        /* This prevents horizontal scrolling */
+    }
+
+}
+
+/* For small laptops */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1152px;
+        overflow-y: hidden;
+        /* This prevents horizontal scrolling */
+    }
+
+}
+
+/* --------------------------For Mobile------------------------ */
+@media (max-width: 576px) {
+    .hero {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    header {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 76% 96%, 0 100%);
+    }
+
+    .hero .right {
+        position: absolute;
+        top: 272px;
+        padding: 0 1rem;
+        /* To make the text readable on the image */
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+        padding-bottom: 150px;
+    }
+
+    .hero .right h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .left {
+        margin-top: -7rem;
+        margin-right: -9rem;
+        padding-bottom: 4rem;
+    }
+
+    .about .right {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .about .right .socials {
+        justify-content: center;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    section.services .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 6rem;
+    }
+
+    section.freelancer {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 90%, 0 100%);
+        padding-bottom: 8rem;
+    }
+
+    section.reviews .slider .slide {
+        padding: 0px 1rem;
+    }
+
+    .section-heading+p {
+        margin-bottom: 3rem;
+        margin-top: 1.5rem;
+    }
+
+    section.work .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    section.contact .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    section.blog {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 97%, 0 100%);
+    }
+
+    section.blog {
+        padding-bottom: 8rem;
+    }
+
+    section.contact .input-wrap {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    section.blog .card-wrapper .card:nth-child(2) {
+        height: 85%;
+        margin: 2rem 0;
+    }
+
+    section.blog .card-wrapper .card:nth-child(3) {
+        margin: -1rem 0;
+        padding-bottom: 2rem;
+    }
+
+    footer {
+        padding-bottom: 2rem;
+    }
+
+    footer .footer-socials a img {
+        width: 1.5rem;
+    }
+
+    .hero .left img {
+        width: 391px;
+        margin-top: 8rem;
+        transform: scale(1.5);
+    }
+
+    section.blog .card-wrapper .card .card-content {
+        margin-bottom: 3rem;
+    }
+
+    section.blog .card-wrapper .card {
+        height: 100%;
+    }
+
+    .mobile-nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    .mobile-nav {
+        height: 100%;
+    }
+
+    .mobile-nav-logo {
+        height: 80px;
+    }
+
+    section.blog .card-wrapper .card .card-content p {
+        font-size: 1rem;
+    }
+
+    section.blog .card-wrapper .card .card-content h1 {
+        font-size: 1rem;
+    }
+
+    section.blog .card-wrapper .card .card-content a {
+        font-size: 1rem;
+    }
+
+    section.blog .card-wrapper .card .card-content span {
+        font-size: 1rem;
+    }
+}
